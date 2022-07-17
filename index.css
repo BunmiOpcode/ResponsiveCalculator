@@ -1,0 +1,164 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: #ecf0f3; */
+    font-family: sans-serif;
+    outline: none;
+    transition:all 0.5s ease
+}
+
+body{
+    background-image: linear-gradient(to bottom right, rgb(166, 160, 188), rgb(221, 200, 215));
+    /* background-image: #ecf0f3; */
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.calculator{
+    position: relative;
+    background: #ecf0f3;
+    /* background-image: linear-gradient(to bottom right, rgba(79, 51, 176, 1), rgba(210, 53, 165 )); */
+    padding: 15px;
+    border-radius: 30px;   
+    box-shadow: 5px 5px 12px;           
+    /* box-shadow: 0 0 30px #0000; */
+    display: grid;
+    grid-template-columns: repeat(4, 68px);
+}
+
+.theme-toggler{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.theme-toggler.active{
+    color: #333;
+}
+
+.theme-toggler.active::before{
+    background: #fff;
+}
+
+.theme-toggler::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 5px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #333;
+    z-index: -1;
+}
+
+input{
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background: #000;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 35px;
+    text-align: end;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+
+}
+
+button{
+    height: 48px;
+    width: 48px;
+    background: #ecf0f3;
+    border: none;
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 18px;
+}
+
+button:hover{
+    transform: scale(1.1);  
+}
+
+.equal{
+    width: 115px;
+    border-radius: 40px;
+    background: #ecf0f3;
+}
+
+/* LIGHT THEME */
+
+.light{
+    background: #fff;
+
+}
+
+.light button#clear{
+    color: #fff;
+    background: rgb(29, 27, 27);
+}
+
+.calculator.light button#display{
+    background: #e00b4e;
+    color: #fff;
+}
+
+.light button#del{
+    background: #c70b18;
+    color: #ffff;
+}
+
+.light button#operator{
+    color: #fff;
+    background: rgb(119, 238, 108);
+}
+
+/* DARK THEME */
+
+.dark{
+    background: #071115;
+
+}
+
+/* .calculator.dark button{
+    background: transparent;
+} */
+
+.calculator.dark button#display{
+    color: #f8fafd;
+    background: #1b2f3a;
+}
+
+.dark button#clear{
+    color: #071115;
+    background: #ffff;
+}
+
+.dark button#del{
+    background: #c70b18;
+    color: #ffff
+}
+
+.dark button#operator{
+    color: #fff;
+    background: rgb(255, 166, 0);
+}
+
+.dark input#output-screen{
+    background: #fff;
+    color: #000;
+}
